@@ -43,6 +43,9 @@ def check_balance(cons,  sqr = 0, mer = 0, crl = 0):
     if len(cons) == 0:
         return not any([sqr, mer, crl])
 
+    if sqr < 0 or mer < 0 or crl < 0:
+        return False
+
     if cons[0] == '[':
         return check_balance(cons[1:], sqr + 1, mer, crl)
     elif cons[0] == '{':
