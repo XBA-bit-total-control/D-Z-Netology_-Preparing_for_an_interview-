@@ -8,7 +8,7 @@ class Stack:
         self.__stack = ''
 
     def is_empty(self):
-        return bool(self.__stack)
+        return not bool(self.__stack)
 
     def push(self, n_item):
         if n_item in ['[', '(', '{', '}', ')', ']']:
@@ -18,7 +18,7 @@ class Stack:
             raise ValueError("Такое тебе не добавить в стек!")
 
     def pop(self):
-        if self.is_empty():
+        if not self.is_empty():
             self.rem = self.__stack[-1]
             self.__stack = self.__stack[:-1]
             return self.rem
@@ -26,7 +26,7 @@ class Stack:
             return None
 
     def peek(self):
-            return self.__stack[-1] if self.is_empty() else None
+            return self.__stack[-1] if not self.is_empty() else None
 
     def size(self):
         return len(self.__stack)
