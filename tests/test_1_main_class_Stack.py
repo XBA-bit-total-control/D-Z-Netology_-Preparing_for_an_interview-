@@ -20,7 +20,7 @@ not_balans_stack = Stack()
     ]
 )
 def test_method_is_empty_without_elements(stack):
-    assert stack.is_empty() == False, "Стек должен быть пуст"
+    assert stack.is_empty() == True, "Стек должен быть пуст"
 
 
 @pytest.mark.parametrize(
@@ -109,7 +109,7 @@ def test_method_pop(expected):
     ]
 )
 def test_method_is_empty_with_elements(stack):
-    assert stack.is_empty() == True, "Стек не заполнен"
+    assert stack.is_empty() == False, "Стек не заполнен"
 
 
 @pytest.mark.parametrize(
