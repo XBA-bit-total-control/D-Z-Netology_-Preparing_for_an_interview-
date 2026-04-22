@@ -19,9 +19,9 @@ class Stack:
 
     def pop(self):
         if not self.is_empty():
-            self.rem = self.__stack[-1]
+            rem = self.__stack[-1]
             self.__stack = self.__stack[:-1]
-            return self.rem
+            return rem
         else:
             return None
 
